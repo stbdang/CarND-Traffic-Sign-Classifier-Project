@@ -174,7 +174,11 @@ Here are the results of the prediction:
 | Roundabout mandatory		| Roundabout mandatory      					|
 
 
-The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%.
+The model was able to correctly guess 3 of the 5 traffic signs, which gives an accuracy of 60%. The test set accuracy was 92.2% which is significantly higher. I think this can be attributed to:
+* Small number of samples
+* Choosing classes with lower accuracy - the classifier does very well on some classes and does poorly on some.
+* Noisy sample - Image 3 was especially hard to predict due to its artifacts.
+* Overfit - the model might be overfitting. However since we did not test/validate on the test set, I don't think this is the major contributor.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
