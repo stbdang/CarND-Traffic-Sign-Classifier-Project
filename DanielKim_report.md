@@ -107,10 +107,10 @@ My final model consisted of the following layers:
 The code for training the model is located in the eigth cell of the ipython notebook. 
 
 * Optimizer : Adam 
-* Learning rate : 0.002
+* Learning rate : 0.005
 * Batch : 256
 * Epoch : 10
-* L2 regularization (optional) : 0 for final submission
+* L2 regularization (optional) : 0.0001
 
 #### 5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
@@ -169,8 +169,8 @@ Here are the results of the prediction:
 |:-------------------------:|:---------------------------------------------:| 
 | Speed limit (50km/h)  	| Speed limit (50km/h)  						| 
 | Bumpy road    			| Bumpy road 									|
-| Children crossing			| Speed limit (30km/h)							|
-| Road narrows on the right	| Traffic signals				 				|
+| Children crossing			| Keep right									|
+| Road narrows on the right	| General caution				 				|
 | Roundabout mandatory		| Roundabout mandatory      					|
 
 
