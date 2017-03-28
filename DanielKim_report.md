@@ -123,12 +123,10 @@ My final model results were:
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
-
-I chose LeNet as the starting point since it operates on the similar imput dimension and it's known to provide good result.
+** I chose LeNet as the starting point since it operates on the similar imput dimension and it's known to provide good result.
 
 * What were some problems with the initial architecture?
-
-Because the traffic sign is more complicated that a digit and it had more classes, the maximum accuracy that it could reach was limited (~89%)
+** Because the traffic sign is more complicated that a digit and it had more classes, the maximum accuracy that it could reach was limited (~89%)
 
 * How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to over fitting or under fitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
 
