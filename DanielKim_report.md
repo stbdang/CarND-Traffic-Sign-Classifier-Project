@@ -17,14 +17,13 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image1]: ./report/histogram.png "Visualization"
+[image3]: ./report/fake_data.jpg "Fake data"
+[image4]: ./test_images/50.png "Traffic Sign 1"
+[image5]: ./test_images/bumpy_road.png "Traffic Sign 2"
+[image6]: ./test_images/children_crossing.png "Traffic Sign 3"
+[image7]: ./test_images/narrows_right.png "Traffic Sign 4"
+[image8]: ./test_images/roundabout.png "Traffic Sign 5"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -65,25 +64,25 @@ Here is an exploratory visualization of the data set. It is a histogram showing 
 
 The code for this step is contained in the fourth code cell of the IPython notebook.
 
-As a first step, I do grayscaling depending on the paramater. For the final implementation, I decided not to.
-
-Then I normalize the data per image to zero mean and standard dev of 1 by subtracting by its average value the divide by its standard deviation.
-
-The last stage involves creating fake data by randomized scaling and rotating of the training data. For the final implementation, I've created 2 additional data per each trainging data. I decided to generate additional data because by looking at the distribution of classes, it seemed that there are some classes with small number of images I wanted to provide more training data for those classes. Also, adding randomized scale and rotation seemed to make the learning more robust.
-
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
+As a first step, I do grayscaling on the images, then I normalize the data per image to zero mean and standard dev of 1 by subtracting by its average value the divide by its standard deviation.
 
 ####2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
 
 I believe the data set was already divided into training and validation set. 
 
+The code for this step is contained in the fifth code cell of the IPython notebook.
+
+I created fake data by randomized scaling and rotating of the training data. For the final implementation, I've created 2 additional data per each trainging data. I decided to generate additional data because by looking at the distribution of classes, it seemed that there are some classes with small number of images I wanted to provide more training data for those classes. Also, adding randomized scale and rotation seemed to make the learning more robust.
+
+Here is an example of an original image and an augmented image:
+
+![alt text][image3]
+
 My final training set had 104397 number of images. My validation set and test set had 4410 and 12630 number of images.
 
 ####3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
-The code for my final model is located in the seventh cell of the ipython notebook. 
+The code for my final model is located in the sixth cell of the ipython notebook. 
 
 My final model consisted of the following layers:
 
@@ -96,10 +95,8 @@ My final model consisted of the following layers:
 | Convolution 5x5	    | 1x1 stride, valid padding, outputs 10x10x16 	|
 | Max pooling	      	| 2x2 stride,  outputs 5x5x16	 				|
 | RELU					|												|
-| Fully connected		| 600->180    									|
-| Fully connected		| 600->180    									|
-| Fully connected		| 600->180    									|
-| Softmax				| etc.        									|
+| Fully connected		| 600->70    									|
+| Fully connected		| 70->43    									|
 |						|												|
 |						|												|
  
@@ -120,8 +117,8 @@ The code for training the model is located in the eigth cell of the ipython note
 The code for calculating the accuracy of the model is located in the ninth cell of the Ipython notebook.
 
 My final model results were:
-* training set accuracy of ? 0.995
-* validation set accuracy of ? 0.948
+* training set accuracy of ? 0.998
+* validation set accuracy of ? 0.947
 * test set accuracy of ? 0.922
 
 If an iterative approach was chosen:
@@ -146,7 +143,7 @@ LeNet
 * Why did you believe it would be relevant to the traffic sign application?
 It solves a similar problem (digit recognition) very well.
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
-
+Validation and test set performance is similar which is good. Would like to see training and validation accuracy to be closer but they are much better than before.
  
 
 ###Test a Model on New Images
