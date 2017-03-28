@@ -18,7 +18,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./report/histogram.png "Visualization"
-[image3]: ./report/fake_data.jpg "Fake data"
+[image3]: ./report/fake_data.png "Fake data"
 [image4]: ./test_images/50.png "Traffic Sign 1"
 [image5]: ./test_images/bumpy_road.png "Traffic Sign 2"
 [image6]: ./test_images/children_crossing.png "Traffic Sign 3"
