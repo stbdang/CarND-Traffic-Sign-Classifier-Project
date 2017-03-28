@@ -1,6 +1,6 @@
-#**Traffic Sign Recognition** 
+# **Traffic Sign Recognition** 
 
-##Daniel Kim
+## Daniel Kim
 
 ---
 
@@ -132,17 +132,18 @@ If an iterative approach was chosen:
 	* I've added more depth (16 to 24) to the second convolution layer because I figured that the sign would have more varieties in terms of higher level features. I thought the first convolution layer doesn't need additional depth since the number of primitive feature categories which fits into the kernel (5x5x3) would be small.
 
 * Which parameters were tuned? How were they adjusted and why?
-
-Learning rate, sigma and mu for initial weight were adjusted to achieve better results.
+	* Learning rate, sigma and mu for initial weight were adjusted to achieve better results.
 
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-
-Convolution layer works well because the position/scale of the sign and features can vary.
+	* Convolution layer works well because the position/scale of the sign and features can vary.
 
 If a well known architecture was chosen:
-* What architecture was chosen? - LeNet
-* Why did you believe it would be relevant to the traffic sign application? - It solves a similar problem (digit recognition) very well.
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well? - Validation and test set performance is similar which is good. Would like to see training and validation accuracy to be closer but they are much better than before.
+* What architecture was chosen?
+	* LeNet
+* Why did you believe it would be relevant to the traffic sign application? 
+	* It solves a similar problem (digit recognition) very well.
+* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well? 
+	* Validation and test set performance is similar which is good. Would like to see training and validation accuracy to be closer but they are much better than before.
  
 
 ### Test a Model on New Images
